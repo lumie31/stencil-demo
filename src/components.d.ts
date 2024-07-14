@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface Web3Accordion {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +30,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLWeb3AccordionElement extends Components.Web3Accordion, HTMLStencilElement {
+    }
+    var HTMLWeb3AccordionElement: {
+        prototype: HTMLWeb3AccordionElement;
+        new (): HTMLWeb3AccordionElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "web3-accordion": HTMLWeb3AccordionElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +56,11 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface Web3Accordion {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "web3-accordion": Web3Accordion;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +68,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "web3-accordion": LocalJSX.Web3Accordion & JSXBase.HTMLAttributes<HTMLWeb3AccordionElement>;
         }
     }
 }

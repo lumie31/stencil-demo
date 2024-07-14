@@ -1,0 +1,13 @@
+/* :host {
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+} */
+ :root {
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+}
+/* web3-accordion {
+    border: 2px solid red ;
+} */
